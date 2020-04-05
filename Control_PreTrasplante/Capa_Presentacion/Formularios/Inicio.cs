@@ -87,7 +87,7 @@ namespace Capa_Presentacion
         private void iconbtn_reportes_Click(object sender, EventArgs e)
         {
             BotonActivado(sender, Color.FromArgb(253, 138, 114));
-            AbrirFormularios(new Reportes  ());
+            AbrirFormularios(new Reportes());
         }
 
         private void iconbtn_estudios_Click(object sender, EventArgs e)
@@ -100,6 +100,7 @@ namespace Capa_Presentacion
         {
             BotonActivado(sender, Color.FromArgb(253, 138, 114));
             AbrirFormularios(new Paciente());
+            
         }
     }
 }
