@@ -25,7 +25,7 @@ namespace Capa_Presentacion
         {
             //initialize word object  
             Document document = new Document();
-            document.LoadFromFile(@"C:\Users\Core i3\Documents\Formulario de atención PreHospitalaria.docx");
+            document.LoadFromFile(@"E:\Programas TEC\TEC\Formulario-de-atención-PreHospitalaria.docx");
             //get strings to replace  
             Dictionary<string, string> dictReplace = GetReplaceDictionary();
             //Replace text  
