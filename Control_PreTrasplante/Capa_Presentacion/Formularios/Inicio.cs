@@ -26,6 +26,7 @@ namespace Capa_Presentacion
             InitializeComponent();
             panel_izqiuerdo = new Panel();
             panel_izqiuerdo.Size = new Size(7, 50);
+            PerzonalizarDiseños();
         }
         private void BotonActivado(object enviarboton, Color color)
         {
@@ -98,9 +99,39 @@ namespace Capa_Presentacion
 
         private void iconbtn_paciente_Click(object sender, EventArgs e)
         {
-            BotonActivado(sender, Color.FromArgb(253, 138, 114));
+            MostrarMenu(SubmenuPaciente);
+        }
+
+        private void PerzonalizarDiseños()
+        {
+            SubmenuPaciente.Visible = false;
+        }
+
+        void OcultarSubmenu()
+        {
+            if(SubmenuPaciente.Visible == true)
+            {
+                SubmenuPaciente.Visible = false;
+            }
+            else { }
+        }
+
+        void MostrarMenu(Panel submenu)
+        {
+            if(submenu.Visible == false)
+            {
+                OcultarSubmenu();
+                submenu.Visible = true;
+            }
+            else { submenu.Visible = false; }
+        }
+
+        private void nuevo_paciente_Click(object sender, EventArgs e)
+        {
+            //BotonActivado(sender, Color.FromArgb(253, 138, 114));
+            nuevo_paciente.BackColor = Color.FromArgb(253, 138, 114);
             AbrirFormularios(new Paciente());
-            
+            OcultarSubmenu();
         }
     }
 }
