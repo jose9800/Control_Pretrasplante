@@ -33,10 +33,10 @@
             this.txt_apellidoM = new System.Windows.Forms.TextBox();
             this.txt_nombres = new System.Windows.Forms.TextBox();
             this.txt_curp = new System.Windows.Forms.TextBox();
-            this.txt_rfc = new System.Windows.Forms.TextBox();
+            this.txt_numseg = new System.Windows.Forms.TextBox();
             this.lbl_apellidoM = new System.Windows.Forms.Label();
             this.lbl_nombres = new System.Windows.Forms.Label();
-            this.lbl_rfc = new System.Windows.Forms.Label();
+            this.lbl_numseg = new System.Windows.Forms.Label();
             this.lbl_curp = new System.Windows.Forms.Label();
             this.lbl_fechaNa = new System.Windows.Forms.Label();
             this.lbl_sexo = new System.Windows.Forms.Label();
@@ -53,6 +53,11 @@
             this.ptb_Foto = new System.Windows.Forms.PictureBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btn_agregar = new System.Windows.Forms.Button();
+            this.btn_fecha = new System.Windows.Forms.Button();
+            this.txt_fecha = new System.Windows.Forms.TextBox();
+            this.btn_editar = new System.Windows.Forms.Button();
+            this.btn_borrar = new System.Windows.Forms.Button();
             this.tbc_datosGenerales.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.gbx_Registro.SuspendLayout();
@@ -99,12 +104,12 @@
             this.txt_curp.Size = new System.Drawing.Size(221, 26);
             this.txt_curp.TabIndex = 5;
             // 
-            // txt_rfc
+            // txt_numseg
             // 
-            this.txt_rfc.Location = new System.Drawing.Point(177, 195);
-            this.txt_rfc.Name = "txt_rfc";
-            this.txt_rfc.Size = new System.Drawing.Size(221, 26);
-            this.txt_rfc.TabIndex = 6;
+            this.txt_numseg.Location = new System.Drawing.Point(177, 195);
+            this.txt_numseg.Name = "txt_numseg";
+            this.txt_numseg.Size = new System.Drawing.Size(221, 26);
+            this.txt_numseg.TabIndex = 6;
             // 
             // lbl_apellidoM
             // 
@@ -126,15 +131,15 @@
             this.lbl_nombres.TabIndex = 10;
             this.lbl_nombres.Text = "Nombre (s)";
             // 
-            // lbl_rfc
+            // lbl_numseg
             // 
-            this.lbl_rfc.AutoSize = true;
-            this.lbl_rfc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_rfc.Location = new System.Drawing.Point(28, 201);
-            this.lbl_rfc.Name = "lbl_rfc";
-            this.lbl_rfc.Size = new System.Drawing.Size(122, 20);
-            this.lbl_rfc.TabIndex = 11;
-            this.lbl_rfc.Text = "Num.Seg.Social";
+            this.lbl_numseg.AutoSize = true;
+            this.lbl_numseg.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_numseg.Location = new System.Drawing.Point(28, 201);
+            this.lbl_numseg.Name = "lbl_numseg";
+            this.lbl_numseg.Size = new System.Drawing.Size(122, 20);
+            this.lbl_numseg.TabIndex = 11;
+            this.lbl_numseg.Text = "Num.Seg.Social";
             // 
             // lbl_curp
             // 
@@ -206,18 +211,21 @@
             // 
             // gbx_Registro
             // 
+            this.gbx_Registro.Controls.Add(this.txt_fecha);
+            this.gbx_Registro.Controls.Add(this.btn_fecha);
+            this.gbx_Registro.Controls.Add(this.btn_agregar);
             this.gbx_Registro.Controls.Add(this.txt_nombres);
             this.gbx_Registro.Controls.Add(this.lbl_Estudios);
             this.gbx_Registro.Controls.Add(this.lbl_apellidoP);
             this.gbx_Registro.Controls.Add(this.comboBox1);
-            this.gbx_Registro.Controls.Add(this.txt_rfc);
+            this.gbx_Registro.Controls.Add(this.txt_numseg);
             this.gbx_Registro.Controls.Add(this.monthCalendar1);
             this.gbx_Registro.Controls.Add(this.lbl_apellidoM);
             this.gbx_Registro.Controls.Add(this.lbl_nombres);
             this.gbx_Registro.Controls.Add(this.ibtn_enviar);
             this.gbx_Registro.Controls.Add(this.txt_curp);
             this.gbx_Registro.Controls.Add(this.rdb_femenino);
-            this.gbx_Registro.Controls.Add(this.lbl_rfc);
+            this.gbx_Registro.Controls.Add(this.lbl_numseg);
             this.gbx_Registro.Controls.Add(this.rdb_masculino);
             this.gbx_Registro.Controls.Add(this.lbl_curp);
             this.gbx_Registro.Controls.Add(this.txt_apellidoP);
@@ -257,7 +265,7 @@
             // 
             // monthCalendar1
             // 
-            this.monthCalendar1.Location = new System.Drawing.Point(493, 115);
+            this.monthCalendar1.Location = new System.Drawing.Point(493, 104);
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 19;
             // 
@@ -267,12 +275,12 @@
             this.ibtn_enviar.IconChar = FontAwesome.Sharp.IconChar.None;
             this.ibtn_enviar.IconColor = System.Drawing.Color.Black;
             this.ibtn_enviar.IconSize = 16;
-            this.ibtn_enviar.Location = new System.Drawing.Point(853, 320);
+            this.ibtn_enviar.Location = new System.Drawing.Point(966, 333);
             this.ibtn_enviar.Name = "ibtn_enviar";
             this.ibtn_enviar.Rotation = 0D;
-            this.ibtn_enviar.Size = new System.Drawing.Size(117, 31);
+            this.ibtn_enviar.Size = new System.Drawing.Size(120, 30);
             this.ibtn_enviar.TabIndex = 17;
-            this.ibtn_enviar.Text = "Registrar";
+            this.ibtn_enviar.Text = "Generar PDF";
             this.ibtn_enviar.UseVisualStyleBackColor = true;
             this.ibtn_enviar.Click += new System.EventHandler(this.ibtn_enviar_Click);
             // 
@@ -286,6 +294,7 @@
             this.rdb_femenino.TabStop = true;
             this.rdb_femenino.Text = "Femenino";
             this.rdb_femenino.UseVisualStyleBackColor = true;
+            this.rdb_femenino.CheckedChanged += new System.EventHandler(this.rdb_femenino_CheckedChanged);
             // 
             // rdb_masculino
             // 
@@ -297,6 +306,7 @@
             this.rdb_masculino.TabStop = true;
             this.rdb_masculino.Text = "Masculino";
             this.rdb_masculino.UseVisualStyleBackColor = true;
+            this.rdb_masculino.CheckedChanged += new System.EventHandler(this.rdb_masculino_CheckedChanged);
             // 
             // ptb_Foto
             // 
@@ -309,6 +319,8 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.btn_borrar);
+            this.tabPage2.Controls.Add(this.btn_editar);
             this.tabPage2.Controls.Add(this.dataGridView1);
             this.tabPage2.Location = new System.Drawing.Point(4, 29);
             this.tabPage2.Name = "tabPage2";
@@ -324,6 +336,53 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(1191, 511);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // btn_agregar
+            // 
+            this.btn_agregar.Location = new System.Drawing.Point(816, 333);
+            this.btn_agregar.Name = "btn_agregar";
+            this.btn_agregar.Size = new System.Drawing.Size(120, 30);
+            this.btn_agregar.TabIndex = 22;
+            this.btn_agregar.Text = "Registrar";
+            this.btn_agregar.UseVisualStyleBackColor = true;
+            this.btn_agregar.Click += new System.EventHandler(this.btn_agregar_Click);
+            // 
+            // btn_fecha
+            // 
+            this.btn_fecha.Location = new System.Drawing.Point(493, 278);
+            this.btn_fecha.Name = "btn_fecha";
+            this.btn_fecha.Size = new System.Drawing.Size(120, 30);
+            this.btn_fecha.TabIndex = 23;
+            this.btn_fecha.Text = "Agregar fecha";
+            this.btn_fecha.UseVisualStyleBackColor = true;
+            this.btn_fecha.Click += new System.EventHandler(this.btn_fecha_Click);
+            // 
+            // txt_fecha
+            // 
+            this.txt_fecha.Location = new System.Drawing.Point(493, 320);
+            this.txt_fecha.Name = "txt_fecha";
+            this.txt_fecha.Size = new System.Drawing.Size(195, 26);
+            this.txt_fecha.TabIndex = 24;
+            // 
+            // btn_editar
+            // 
+            this.btn_editar.Location = new System.Drawing.Point(383, 545);
+            this.btn_editar.Name = "btn_editar";
+            this.btn_editar.Size = new System.Drawing.Size(120, 30);
+            this.btn_editar.TabIndex = 1;
+            this.btn_editar.Text = "Editar";
+            this.btn_editar.UseVisualStyleBackColor = true;
+            this.btn_editar.Click += new System.EventHandler(this.btn_editar_Click);
+            // 
+            // btn_borrar
+            // 
+            this.btn_borrar.Location = new System.Drawing.Point(603, 545);
+            this.btn_borrar.Name = "btn_borrar";
+            this.btn_borrar.Size = new System.Drawing.Size(120, 30);
+            this.btn_borrar.TabIndex = 2;
+            this.btn_borrar.Text = "Borrar";
+            this.btn_borrar.UseVisualStyleBackColor = true;
+            this.btn_borrar.Click += new System.EventHandler(this.btn_borrar_Click);
             // 
             // Paciente
             // 
@@ -355,10 +414,10 @@
         private System.Windows.Forms.TextBox txt_apellidoM;
         private System.Windows.Forms.TextBox txt_nombres;
         private System.Windows.Forms.TextBox txt_curp;
-        private System.Windows.Forms.TextBox txt_rfc;
+        private System.Windows.Forms.TextBox txt_numseg;
         private System.Windows.Forms.Label lbl_apellidoM;
         private System.Windows.Forms.Label lbl_nombres;
-        private System.Windows.Forms.Label lbl_rfc;
+        private System.Windows.Forms.Label lbl_numseg;
         private System.Windows.Forms.Label lbl_curp;
         private System.Windows.Forms.Label lbl_fechaNa;
         private System.Windows.Forms.Label lbl_sexo;
@@ -375,5 +434,10 @@
         private System.Windows.Forms.Button btn_foto;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button btn_agregar;
+        private System.Windows.Forms.TextBox txt_fecha;
+        private System.Windows.Forms.Button btn_fecha;
+        private System.Windows.Forms.Button btn_borrar;
+        private System.Windows.Forms.Button btn_editar;
     }
 }

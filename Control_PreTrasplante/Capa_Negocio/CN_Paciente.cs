@@ -19,5 +19,18 @@ namespace Capa_Negocio
             tabla = objPaciente.MostrarDatos();
             return tabla;
         }
+
+        public void Insertar(string num_seg, string curp1, string nom, string ap, string am, string sex, string nac)
+        {
+            objPaciente.InsertarDatos(num_seg,curp1,nom,ap,am,sex,nac);
+        }
+        public void Editar(string num_seg, string curp1, string nom, string ap, string am, string sex, string nac, string id)
+        {
+            objPaciente.EditarDatos( num_seg,  curp1,  nom,  ap,  am,  sex,  nac, Convert.ToInt16(id));
+        }
+        public void EliminarProd(string id)
+        {
+            objPaciente.EliminarDatos(Convert.ToInt16(id));
+        }
     }
 }

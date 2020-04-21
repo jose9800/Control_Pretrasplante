@@ -75,7 +75,7 @@
             this.btn_Entrar.TabIndex = 5;
             this.btn_Entrar.Text = "Entrar";
             this.btn_Entrar.UseVisualStyleBackColor = true;
-            this.btn_Entrar.Click += new System.EventHandler(this.btn_Entrar_Click);
+            //this.btn_Entrar.Click += new System.EventHandler(this.btn_Entrar_Click);
             // 
             // lbl_InicioSesion
             // 

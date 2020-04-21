@@ -56,16 +56,114 @@ namespace Capa_Presentacion
         {
 
         }
-
-        CN_Paciente objFormaPciente = new CN_Paciente();
+        private void btn_fecha_Click(object sender, EventArgs e)
+        {
+            txt_fecha.Text = monthCalendar1.SelectionStart.Day.ToString() + "/" +
+                monthCalendar1.SelectionStart.Month.ToString() + "/" +
+                monthCalendar1.SelectionStart.Year.ToString();
+        }
+        string genero;
+        private void rdb_masculino_CheckedChanged(object sender, EventArgs e)
+        {
+            genero = "M";
+        }
+        private void rdb_femenino_CheckedChanged(object sender, EventArgs e)
+        {
+            genero = "F";
+        }
+        //--------------------------Métodos CRUD------------------------------------------//
+        CN_Paciente objFormaPciente = new CN_Paciente(); //Se crea una instancia de la clase Paciente
+        private string id_paciente = null; //Se crea la variable id_paciente para su manipulación
+        private bool editar = false; //Una bandera 
 
         private void Paciente_Load(object sender, EventArgs e)
         {
             MostrarPa();
-        }
+        } //Evento que permite visualizar los registros 
         private void MostrarPa()
         {
-            dataGridView1.DataSource = objFormaPciente.MostrarPaci();
+            CN_Paciente objforma = new CN_Paciente();
+            dataGridView1.DataSource = objforma.MostrarPaci();
+        } //Método para vizualizar los registros de la DB
+
+        private void btn_agregar_Click(object sender, EventArgs e) //Registrar paciente
+        {
+            if (editar == false)
+            {
+                try
+                {
+                    objFormaPciente.Insertar(txt_numseg.Text, txt_curp.Text, txt_nombres.Text, txt_apellidoP.Text, txt_apellidoM.Text,genero, txt_fecha.Text);
+                    MessageBox.Show("Se inserto correctamente");
+                    MostrarPa();
+                    limpiar();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("No se pudo insertar los datos " + ex);
+                }
+            }
+            if (editar == true)
+            {
+                try
+                {
+                    objFormaPciente.Editar(txt_numseg.Text, txt_curp.Text, txt_nombres.Text, txt_apellidoP.Text, txt_apellidoM.Text, genero, txt_fecha.Text,id_paciente);
+                    MessageBox.Show("Se edito correctamente");
+                    MostrarPa();
+                    limpiar();
+                    editar = false;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("No se pudo insertar los datos " + ex);
+                }
+            }
+        }
+
+        private void btn_editar_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                editar = true;
+                txt_numseg.Text = dataGridView1.CurrentRow.Cells["Num_seg_social"].Value.ToString();
+                txt_curp.Text = dataGridView1.CurrentRow.Cells["Curp"].Value.ToString();
+                txt_nombres.Text = dataGridView1.CurrentRow.Cells["Nombre"].Value.ToString();
+                txt_apellidoP.Text = dataGridView1.CurrentRow.Cells["ApellidoP"].Value.ToString();
+                txt_apellidoM.Text = dataGridView1.CurrentRow.Cells["ApellidoM"].Value.ToString();
+                genero = dataGridView1.CurrentRow.Cells["sexo"].Value.ToString();
+                txt_fecha.Text = dataGridView1.CurrentRow.Cells["FechaNacimiento"].Value.ToString();
+                id_paciente = dataGridView1.CurrentRow.Cells["Id"].Value.ToString();
+            }
+            else
+            {
+                MessageBox.Show("Seleccione una fila por favor");
+            }
+        }
+
+        private void btn_borrar_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                id_paciente = dataGridView1.CurrentRow.Cells["Id"].Value.ToString();
+                objFormaPciente.EliminarProd(id_paciente);
+                MessageBox.Show("Eliminado correctamente");
+                MostrarPa();
+            }
+            else
+            {
+                MessageBox.Show("No se puedo eliminar correctamente");
+            }
+        }
+
+        private void limpiar()
+        {
+            txt_nombres.Clear();
+            txt_apellidoP.Clear();
+            txt_apellidoM.Clear();
+            txt_numseg.Clear();
+            txt_curp.Clear();
+            txt_fecha.Clear();
+            rdb_masculino.Checked = false;
+            rdb_femenino.Checked = false;
         }
     }
 }
