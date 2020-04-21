@@ -34,45 +34,21 @@ namespace Capa_AccesoDatos
                 }
             }
         }
-        
 
-        //static string[,] usuarios;//Supuesta base de datos
-        //static public void  Insertar()
-        //{
-        //    usuarios = new string[10, 2];//Registros de la supesta base de datos
-        //    usuarios[0, 0] = "Abraham";
-        //    usuarios[0, 1] = "1234";
-        //    usuarios[1, 0] = "Jose";
-        //    usuarios[1, 1] = "1234";
-        //}
+        private AD_ConexionMySQL conexion = new AD_ConexionMySQL();
+        MySqlDataReader leerdatos;
+        DataTable tabla = new DataTable();
+        MySqlCommand comando = new MySqlCommand();
 
-        //static public Boolean Existe_Usuario(string cadena, ref int fila)
-        //{
-        //    Insertar();
-        //    //Simular busqueda en base de datos
-        //    for(int x = 0; x < usuarios.Length; x++)
-        //    {
-        //        if(cadena == usuarios[x, 0])
-        //        {
-        //            fila = x;
-        //            return true;
-        //        }
-        //        else { }
-        //    }
-        //    return false;
-        //}
-
-        //static public Boolean Busca_Contr(string cadena, int fila)
-        //{
-        //    //Simular busqueda en base de datos
-        //    if (cadena == usuarios[fila, 1])
-        //    {
-        //        return true;
-        //    }
-        //    else
-        //    {
-        //        return false;
-        //    }
-        //}
+        public DataTable MostrarDatos()
+        {
+            comando.Connection = conexion.AbrirConexion();
+            comando.CommandText = "select *from Paciente";
+            //comando.CommandType = CommandType.StoredProcedure;
+            leerdatos = comando.ExecuteReader();
+            tabla.Load(leerdatos);
+            conexion.CerrarConexion();
+            return tabla;
+        }
     }
 }

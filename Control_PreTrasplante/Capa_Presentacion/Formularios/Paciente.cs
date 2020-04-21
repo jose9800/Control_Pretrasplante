@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using System.IO;
 using Spire.Doc;
 using Spire.Doc.Documents;
+using Capa_Negocio;
 
 namespace Capa_Presentacion
 {
@@ -49,6 +50,22 @@ namespace Capa_Presentacion
                 
                 return replaceDict;
             }
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        CN_Paciente objFormaPciente = new CN_Paciente();
+
+        private void Paciente_Load(object sender, EventArgs e)
+        {
+            MostrarPa();
+        }
+        private void MostrarPa()
+        {
+            dataGridView1.DataSource = objFormaPciente.MostrarPaci();
         }
     }
 }

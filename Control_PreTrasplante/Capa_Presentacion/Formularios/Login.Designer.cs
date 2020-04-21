@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.panel_IniciarSesion = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.btn_Entrar = new System.Windows.Forms.Button();
             this.lbl_InicioSesion = new System.Windows.Forms.Label();
             this.lbl_usuario = new System.Windows.Forms.Label();
@@ -37,7 +38,6 @@
             this.Contraseña = new System.Windows.Forms.TextBox();
             this.Nombre_U = new System.Windows.Forms.TextBox();
             this.ptb_logo = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel_IniciarSesion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptb_logo)).BeginInit();
             this.SuspendLayout();
@@ -51,16 +51,27 @@
             this.panel_IniciarSesion.Controls.Add(this.lbl_contrasena);
             this.panel_IniciarSesion.Controls.Add(this.Contraseña);
             this.panel_IniciarSesion.Controls.Add(this.Nombre_U);
+            this.panel_IniciarSesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel_IniciarSesion.Location = new System.Drawing.Point(206, 189);
             this.panel_IniciarSesion.Name = "panel_IniciarSesion";
             this.panel_IniciarSesion.Size = new System.Drawing.Size(517, 201);
             this.panel_IniciarSesion.TabIndex = 1;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(359, 74);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(144, 61);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "Mostrar sin conexion";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // btn_Entrar
             // 
-            this.btn_Entrar.Location = new System.Drawing.Point(359, 138);
+            this.btn_Entrar.Location = new System.Drawing.Point(359, 155);
             this.btn_Entrar.Name = "btn_Entrar";
-            this.btn_Entrar.Size = new System.Drawing.Size(111, 20);
+            this.btn_Entrar.Size = new System.Drawing.Size(118, 34);
             this.btn_Entrar.TabIndex = 5;
             this.btn_Entrar.Text = "Entrar";
             this.btn_Entrar.UseVisualStyleBackColor = true;
@@ -71,7 +82,7 @@
             this.lbl_InicioSesion.AutoSize = true;
             this.lbl_InicioSesion.Location = new System.Drawing.Point(205, 9);
             this.lbl_InicioSesion.Name = "lbl_InicioSesion";
-            this.lbl_InicioSesion.Size = new System.Drawing.Size(68, 13);
+            this.lbl_InicioSesion.Size = new System.Drawing.Size(119, 24);
             this.lbl_InicioSesion.TabIndex = 2;
             this.lbl_InicioSesion.Text = "Iniciar sesión";
             // 
@@ -80,31 +91,31 @@
             this.lbl_usuario.AutoSize = true;
             this.lbl_usuario.Location = new System.Drawing.Point(32, 74);
             this.lbl_usuario.Name = "lbl_usuario";
-            this.lbl_usuario.Size = new System.Drawing.Size(96, 13);
+            this.lbl_usuario.Size = new System.Drawing.Size(173, 24);
             this.lbl_usuario.TabIndex = 3;
             this.lbl_usuario.Text = "Nombre de usuario";
             // 
             // lbl_contrasena
             // 
             this.lbl_contrasena.AutoSize = true;
-            this.lbl_contrasena.Location = new System.Drawing.Point(32, 122);
+            this.lbl_contrasena.Location = new System.Drawing.Point(32, 133);
             this.lbl_contrasena.Name = "lbl_contrasena";
-            this.lbl_contrasena.Size = new System.Drawing.Size(61, 13);
+            this.lbl_contrasena.Size = new System.Drawing.Size(106, 24);
             this.lbl_contrasena.TabIndex = 4;
             this.lbl_contrasena.Text = "Contraseña";
             // 
             // Contraseña
             // 
-            this.Contraseña.Location = new System.Drawing.Point(35, 138);
+            this.Contraseña.Location = new System.Drawing.Point(36, 160);
             this.Contraseña.Name = "Contraseña";
-            this.Contraseña.Size = new System.Drawing.Size(238, 20);
+            this.Contraseña.Size = new System.Drawing.Size(238, 29);
             this.Contraseña.TabIndex = 1;
             // 
             // Nombre_U
             // 
-            this.Nombre_U.Location = new System.Drawing.Point(35, 90);
+            this.Nombre_U.Location = new System.Drawing.Point(36, 101);
             this.Nombre_U.Name = "Nombre_U";
-            this.Nombre_U.Size = new System.Drawing.Size(238, 20);
+            this.Nombre_U.Size = new System.Drawing.Size(238, 29);
             this.Nombre_U.TabIndex = 0;
             // 
             // ptb_logo
@@ -117,16 +128,6 @@
             this.ptb_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ptb_logo.TabIndex = 0;
             this.ptb_logo.TabStop = false;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(359, 69);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(111, 41);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Mostrar sin conexion";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Login
             // 

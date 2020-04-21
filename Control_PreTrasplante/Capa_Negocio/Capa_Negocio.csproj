@@ -53,6 +53,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CN_Paciente.cs" />
     <Compile Include="Logica_Secion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

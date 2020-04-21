@@ -12,10 +12,11 @@ namespace Capa_AccesoDatos
     {
         protected MySqlConnection GetMySqlConnection()//Para el Logion
         {
-            return new MySqlConnection("server=localhost;database=Pre_Transplante;user id=root;password=rojo7913@");
+            return new MySqlConnection(@"server=localhost;database=Pacientespretrasplante;user id=root;Integrated Security=True;");
         }
 
-        private MySqlConnection connection = new MySqlConnection("server=localhost;database=Pre_Transplante;user id=root;password=rojo7913@");
+        private MySqlConnection connection = new MySqlConnection(@"server=localhost;database=Pacientespretrasplante;user id=root;Integrated Security=True;");
+        
         //Metodo publico para abrir conexion
         public MySqlConnection AbrirConexion()
         {
