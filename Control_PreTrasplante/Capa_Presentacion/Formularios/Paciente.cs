@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 //Agregar las librerias correspondientes
 using System.IO;
-using Spire.Doc;//libreria general permite trabajar con archivos doc y pdf
+using Spire.Doc;
 using Spire.Doc.Documents;
 
 namespace Capa_Presentacion
