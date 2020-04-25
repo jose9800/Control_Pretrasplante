@@ -19,17 +19,17 @@ namespace Capa_Presentacion
             InitializeComponent();
         }
 
-        private void btn_Entrar_Click(object sender, EventArgs e)
-        {
-            if(secion.Login_Usuario(Nombre_U.Text, Contraseña.Text))
-            {
-                MessageBox.Show("Iniciaste secion");
-            }
-            else
-            {
-                MessageBox.Show("Nel prro");
-            }
-        }
+        //private void btn_Entrar_Click(object sender, EventArgs e)
+        //{
+        //    if(secion.Login_Usuario(Nombre_U.Text, Contraseña.Text))
+        //    {
+        //        MessageBox.Show("Iniciaste secion");
+        //    }
+        //    else
+        //    {
+        //        MessageBox.Show("Nel prro");
+        //    }
+        //}
 
         private void Login_Load(object sender, EventArgs e)
         {

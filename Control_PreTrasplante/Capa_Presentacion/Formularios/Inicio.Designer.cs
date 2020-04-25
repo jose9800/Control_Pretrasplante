@@ -30,13 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inicio));
             this.panel_MenuLateral = new System.Windows.Forms.Panel();
-            this.panel_logo = new System.Windows.Forms.Panel();
-            this.panel_central = new System.Windows.Forms.Panel();
             this.iconbtn_paciente = new FontAwesome.Sharp.IconButton();
             this.iconbtn_estudios = new FontAwesome.Sharp.IconButton();
             this.iconbtn_reportes = new FontAwesome.Sharp.IconButton();
             this.iconbtn_inicio = new FontAwesome.Sharp.IconButton();
+            this.panel_logo = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel_central = new System.Windows.Forms.Panel();
             this.panel_MenuLateral.SuspendLayout();
             this.panel_logo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -56,31 +56,13 @@
             this.panel_MenuLateral.Size = new System.Drawing.Size(255, 761);
             this.panel_MenuLateral.TabIndex = 0;
             // 
-            // panel_logo
-            // 
-            this.panel_logo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(137)))), ((int)(((byte)(155)))));
-            this.panel_logo.Controls.Add(this.pictureBox1);
-            this.panel_logo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel_logo.Location = new System.Drawing.Point(0, 0);
-            this.panel_logo.Name = "panel_logo";
-            this.panel_logo.Size = new System.Drawing.Size(255, 127);
-            this.panel_logo.TabIndex = 0;
-            // 
-            // panel_central
-            // 
-            this.panel_central.BackColor = System.Drawing.SystemColors.Control;
-            this.panel_central.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_central.Location = new System.Drawing.Point(255, 0);
-            this.panel_central.Name = "panel_central";
-            this.panel_central.Size = new System.Drawing.Size(1229, 761);
-            this.panel_central.TabIndex = 1;
-            // 
             // iconbtn_paciente
             // 
             this.iconbtn_paciente.Dock = System.Windows.Forms.DockStyle.Top;
             this.iconbtn_paciente.FlatAppearance.BorderSize = 0;
             this.iconbtn_paciente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iconbtn_paciente.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.iconbtn_paciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iconbtn_paciente.IconChar = FontAwesome.Sharp.IconChar.UserInjured;
             this.iconbtn_paciente.IconColor = System.Drawing.Color.White;
             this.iconbtn_paciente.IconSize = 30;
@@ -100,6 +82,7 @@
             this.iconbtn_estudios.FlatAppearance.BorderSize = 0;
             this.iconbtn_estudios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iconbtn_estudios.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.iconbtn_estudios.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iconbtn_estudios.IconChar = FontAwesome.Sharp.IconChar.BookMedical;
             this.iconbtn_estudios.IconColor = System.Drawing.Color.White;
             this.iconbtn_estudios.IconSize = 30;
@@ -119,6 +102,7 @@
             this.iconbtn_reportes.FlatAppearance.BorderSize = 0;
             this.iconbtn_reportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iconbtn_reportes.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.iconbtn_reportes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iconbtn_reportes.IconChar = FontAwesome.Sharp.IconChar.NotesMedical;
             this.iconbtn_reportes.IconColor = System.Drawing.Color.White;
             this.iconbtn_reportes.IconSize = 30;
@@ -138,6 +122,7 @@
             this.iconbtn_inicio.FlatAppearance.BorderSize = 0;
             this.iconbtn_inicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iconbtn_inicio.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.iconbtn_inicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iconbtn_inicio.IconChar = FontAwesome.Sharp.IconChar.ClinicMedical;
             this.iconbtn_inicio.IconColor = System.Drawing.Color.White;
             this.iconbtn_inicio.IconSize = 30;
@@ -151,6 +136,16 @@
             this.iconbtn_inicio.UseVisualStyleBackColor = true;
             this.iconbtn_inicio.Click += new System.EventHandler(this.iconbtn_inicio_Click);
             // 
+            // panel_logo
+            // 
+            this.panel_logo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(137)))), ((int)(((byte)(155)))));
+            this.panel_logo.Controls.Add(this.pictureBox1);
+            this.panel_logo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel_logo.Location = new System.Drawing.Point(0, 0);
+            this.panel_logo.Name = "panel_logo";
+            this.panel_logo.Size = new System.Drawing.Size(255, 127);
+            this.panel_logo.TabIndex = 0;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Capa_Presentacion.Properties.Resources.logo_imss;
@@ -160,6 +155,15 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            // 
+            // panel_central
+            // 
+            this.panel_central.BackColor = System.Drawing.SystemColors.Control;
+            this.panel_central.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel_central.Location = new System.Drawing.Point(255, 0);
+            this.panel_central.Name = "panel_central";
+            this.panel_central.Size = new System.Drawing.Size(1229, 761);
+            this.panel_central.TabIndex = 1;
             // 
             // Inicio
             // 
