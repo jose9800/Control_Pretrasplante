@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Capa_Presentacion.Formularios;
 //importar libreria 
 using FontAwesome.Sharp;
 
@@ -26,6 +27,7 @@ namespace Capa_Presentacion
             InitializeComponent();
             panel_izqiuerdo = new Panel();
             panel_izqiuerdo.Size = new Size(7, 50);
+            PerzonalisarDiseño();
         }
         private void BotonActivado(object enviarboton, Color color)
         {
@@ -99,8 +101,43 @@ namespace Capa_Presentacion
         private void iconbtn_paciente_Click(object sender, EventArgs e)
         {
             BotonActivado(sender, Color.FromArgb(253, 138, 114));
+            MostrarSubmenu(submenu_paciente);
+        }
+
+        void PerzonalisarDiseño()
+        {
+            submenu_paciente.Visible = false;
+        }
+
+        void OcultarSubmenu()
+        {
+            if (submenu_paciente.Visible)
+            {
+                submenu_paciente.Visible = false;
+            }
+            else { }
+        }
+
+        void MostrarSubmenu(Panel submenu)
+        {
+            if (!submenu.Visible)
+            {
+                OcultarSubmenu();
+                submenu.Visible = true;
+            }
+            else { submenu.Visible = false; }
+        }
+
+        private void nuevo_paciente_Click(object sender, EventArgs e)
+        {
             AbrirFormularios(new Paciente());
-            
+            OcultarSubmenu();
+        }
+
+        private void lista_paciente_Click(object sender, EventArgs e)
+        {
+            AbrirFormularios(new Lista_Pacientes());
+            OcultarSubmenu();
         }
     }
 }
