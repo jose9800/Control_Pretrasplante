@@ -26,7 +26,7 @@ namespace Capa_Presentacion
         {
             //initialize word object  
             Document document = new Document();
-            document.LoadFromFile(@"C:\Users\Core i3\Documents\Formulario de atención PreHospitalaria.docx");
+            document.LoadFromFile(@"E:\Programas TEC\TEC\Formulario-de-atención-PreHospitalaria.docx");
             //get strings to replace  
             Dictionary<string, string> dictReplace = GetReplaceDictionary();
             //Replace text  
@@ -34,12 +34,33 @@ namespace Capa_Presentacion
             {
                 document.Replace(kvp.Key, kvp.Value, true, true);
             }
-            //Save doc file.  
-            document.SaveToFile("Formulario1.docx", FileFormat.Docx);
-            //Convert to PDF  
-            document.SaveToFile("Formulario1.pdf", FileFormat.PDF);
-            MessageBox.Show("All tasks are finished.", "doc processing", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            document.Close();
+
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = "Pdf Document(*.pdf)|*.pdf";
+            saveFileDialog.Title = "Guardar PDF";
+            saveFileDialog.FileName = txt_numseg.Text;
+
+            DialogResult result = saveFileDialog.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                try
+                {   
+                    document.SaveToFile(saveFileDialog.FileName, FileFormat.PDF);
+                    MessageBox.Show("All tasks are finished.", "doc processing", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    document.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+
+            ////Save doc file.
+            //document.SaveToFile("Formulario1.docx", FileFormat.Docx);
+            ////Convert to PDF  
+            //document.SaveToFile("Formulario1.pdf", FileFormat.PDF);
+            //MessageBox.Show("All tasks are finished.", "doc processing", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //document.Close();
 
             Dictionary<string, string> GetReplaceDictionary()
             {
