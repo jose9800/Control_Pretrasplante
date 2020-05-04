@@ -16,7 +16,6 @@ namespace Capa_Presentacion
     public partial class Inicio : Form
     {
         //Variables globales
-
         private IconButton botonicono;
         private Panel panel_izqiuerdo;
         private Form formularioHijo;

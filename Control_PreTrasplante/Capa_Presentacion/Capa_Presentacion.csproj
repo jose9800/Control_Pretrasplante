@@ -58,6 +58,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Formularios\EditarPaciente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\EditarPaciente.Designer.cs">
+      <DependentUpon>EditarPaciente.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Estudios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,6 +108,9 @@
     <Compile Include="Formularios\Reportes.Designer.cs">
       <DependentUpon>Reportes.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Formularios\EditarPaciente.resx">
+      <DependentUpon>EditarPaciente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Estudios.resx">
       <DependentUpon>Estudios.cs</DependentUpon>
     </EmbeddedResource>
