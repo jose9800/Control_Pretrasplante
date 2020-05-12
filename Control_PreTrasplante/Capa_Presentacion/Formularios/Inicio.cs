@@ -19,7 +19,6 @@ namespace Capa_Presentacion
         private IconButton botonicono;
         private Panel panel_izqiuerdo;
         private Form formularioHijo;
-
         //Constructor
         public Inicio()
         {
@@ -53,7 +52,8 @@ namespace Capa_Presentacion
             if (botonicono != null)
             {
                 //boton
-                botonicono.BackColor = Color.FromArgb(30, 142, 160);
+                //botonicono.BackColor = Color.FromArgb(30, 142, 160);
+                botonicono.BackColor = Color.FromArgb(13, 102, 87);
                 botonicono.ForeColor = Color.Black;
                 botonicono.TextAlign = ContentAlignment.MiddleCenter;
                 botonicono.IconColor = Color.Black;
@@ -83,24 +83,27 @@ namespace Capa_Presentacion
         {
             BotonActivado(sender, Color.FromArgb(253, 138, 114));
             AbrirFormularios(new Inicio_central());
+            OcultarSubmenu();
         }
 
         private void iconbtn_reportes_Click(object sender, EventArgs e)
         {
             BotonActivado(sender, Color.FromArgb(253, 138, 114));
             AbrirFormularios(new Reportes());
+            OcultarSubmenu();
         }
 
         private void iconbtn_estudios_Click(object sender, EventArgs e)
         {
             BotonActivado(sender, Color.FromArgb(253, 138, 114));
             AbrirFormularios(new Estudios());
+            OcultarSubmenu();
         }
 
         private void iconbtn_paciente_Click(object sender, EventArgs e)
         {
             BotonActivado(sender, Color.FromArgb(253, 138, 114));
-            MostrarSubmenu(submenu_paciente);
+            MostrarSubmenu();
         }
 
         void PerzonalisarDiseño()
@@ -108,35 +111,57 @@ namespace Capa_Presentacion
             submenu_paciente.Visible = false;
         }
 
-        void OcultarSubmenu()
+        void OcultarSubmenu(/*Panel submenu*/)
         {
-            if (submenu_paciente.Visible)
-            {
-                submenu_paciente.Visible = false;
-            }
-            else { }
+            //if (submenu.Visible ==true)
+            //{
+            //    submenu_paciente.Visible = false;
+            //}
+            //else { }
+            submenu_paciente.Visible = false;
         }
 
-        void MostrarSubmenu(Panel submenu)
+        void MostrarSubmenu(/*Panel submenu*/)
         {
-            if (!submenu.Visible)
-            {
-                OcultarSubmenu();
-                submenu.Visible = true;
-            }
-            else { submenu.Visible = false; }
+            //if (submenu.Visible==false)
+            //{
+            //    //OcultarSubmenu();
+            //    submenu_paciente.Visible = true;
+            //}
+            ////else { submenu.Visible = false; }
+            submenu_paciente.Visible = true;
         }
 
         private void nuevo_paciente_Click(object sender, EventArgs e)
         {
             AbrirFormularios(new Paciente());
-            OcultarSubmenu();
+            //OcultarSubmenu();
         }
 
         private void lista_paciente_Click(object sender, EventArgs e)
         {
             AbrirFormularios(new Lista_Pacientes());
-            OcultarSubmenu();
+            //OcultarSubmenu();
+        }
+
+        //---------------------------------------Botones para cerrar sesión, minimizar y cerrar aplicación-------------------------------------
+        private void btn_CerrarSesion_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Cerrar sesión, ¿estas seguro?", "Warning",
+               MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                this.Close();
+        }
+
+        private void btn_CerrarTodo_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Cerrar aplicación, ¿estas seguro?", "Warning",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                Application.Exit();
+        }
+
+        private void btn_minimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }
