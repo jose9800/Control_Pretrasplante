@@ -21,12 +21,12 @@ namespace Capa_Presentacion
         {
             InitializeComponent();
         }
-
-        private void ibtn_enviar_Click(object sender, EventArgs e)
+        private void ibtn_enviar_Click(object sender, EventArgs e)  //Método enviar funciona para generar el archivo PDF
         {
+            
             //initialize word object  
             Document document = new Document();
-            document.LoadFromFile(@"E:\Programas TEC\TEC\Formulario-de-atención-PreHospitalaria.docx");
+            document.LoadFromFile(@"C:\Users\Core i3\Documents\Formulario de atención PreHospitalaria.docx");
             //get strings to replace  
             Dictionary<string, string> dictReplace = GetReplaceDictionary();
             //Replace text  
@@ -44,7 +44,7 @@ namespace Capa_Presentacion
             if (result == DialogResult.OK)
             {
                 try
-                {   
+                {
                     document.SaveToFile(saveFileDialog.FileName, FileFormat.PDF);
                     MessageBox.Show("All tasks are finished.", "doc processing", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     document.Close();
@@ -68,7 +68,7 @@ namespace Capa_Presentacion
                 replaceDict.Add("#apellidoP#", txt_apellidoP.Text.Trim());
                 replaceDict.Add("#apellidoM#", txt_apellidoM.Text);
                 replaceDict.Add("#nombre#", txt_nombres.Text.Trim());
-                
+
                 return replaceDict;
             }
         }
@@ -109,39 +109,12 @@ namespace Capa_Presentacion
 
         private void btn_agregar_Click(object sender, EventArgs e) //Registrar paciente
         {
-            if (editar == false)
-            {
-                try
-                {
-                    objFormaPciente.Insertar(txt_numseg.Text, txt_curp.Text, txt_nombres.Text, txt_apellidoP.Text, txt_apellidoM.Text,genero, txt_fecha.Text);
-                    MessageBox.Show("Se inserto correctamente");
-                    MostrarPa();
-                    limpiar();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("No se pudo insertar los datos " + ex);
-                }
-            }
-            if (editar == true)
-            {
-                try
-                {
-                    objFormaPciente.Editar(txt_numseg.Text, txt_curp.Text, txt_nombres.Text, txt_apellidoP.Text, txt_apellidoM.Text, genero, txt_fecha.Text,id_paciente);
-                    MessageBox.Show("Se edito correctamente");
-                    MostrarPa();
-                    limpiar();
-                    editar = false;
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("No se pudo insertar los datos " + ex);
-                }
-            }
+            validar(this);
         }
 
         private void btn_editar_Click(object sender, EventArgs e)
         {
+            tbc_datosGenerales.Show();
             if (dataGridView1.SelectedRows.Count > 0)
             {
                 editar = true;
@@ -185,6 +158,67 @@ namespace Capa_Presentacion
             txt_fecha.Clear();
             rdb_masculino.Checked = false;
             rdb_femenino.Checked = false;
+        }
+
+        //Validar todos los textbox
+        public bool vacio; // Variable utilizada para saber si hay algún TextBox vacio.
+        private void validar(Form formulario)
+        {
+            if (rdb_masculino.Checked == true)
+            {
+                genero = "M";
+            }
+            else {
+                genero = "F";
+            }
+            foreach (Control oControls in formulario.Controls) // Buscamos en cada TextBox de nuestro Formulario.
+            {
+                if (oControls is TextBox & oControls.Text == String.Empty) // Verificamos que no este vacio.
+                {
+                    vacio = true; // Si esta vacio el TextBox asignamos el valor True a nuestra variable.
+                }
+            }
+            if (vacio == true)
+            {
+                MessageBox.Show("Favor de llenar todos los campos antes de finalizar registro."); // Si nuestra variable es verdadera mostramos un mensaje.
+                vacio = false; // Devolvemos el valor original a nuestra variable.
+            }
+            else
+            {
+                if (editar == false)
+                {
+                    try
+                    {
+                        objFormaPciente.Insertar(txt_numseg.Text, txt_curp.Text, txt_nombres.Text, txt_apellidoP.Text, txt_apellidoM.Text, genero, txt_fecha.Text);
+                        MessageBox.Show("Se inserto correctamente");
+                        MostrarPa();
+                        limpiar();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("No se pudo insertar los datos " +ex);
+                    }
+                }
+                if (editar == true)
+                {
+                    try
+                    {
+                        objFormaPciente.Editar(txt_numseg.Text, txt_curp.Text, txt_nombres.Text, txt_apellidoP.Text, txt_apellidoM.Text, genero, txt_fecha.Text, id_paciente);
+                        MessageBox.Show("Se edito correctamente");
+                        MostrarPa();
+                        limpiar();
+                        editar = false;
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("No se pudo modifiar el registro " +ex);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Favor de llenar todos los campos para editar registro");
+                }
+            }
         }
     }
 }

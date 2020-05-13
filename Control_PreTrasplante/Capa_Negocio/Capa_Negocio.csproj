@@ -56,6 +56,7 @@
     <Compile Include="CN_Paciente.cs" />
     <Compile Include="Logica_Secion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UsuarioLogin.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Capa_AccesoDatos\Capa_AccesoDatos.csproj">

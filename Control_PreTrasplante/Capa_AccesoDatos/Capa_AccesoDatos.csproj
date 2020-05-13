@@ -57,6 +57,7 @@
     <Compile Include="Acceso_Datos.cs" />
     <Compile Include="AD_ConexionMySQL.cs" />
     <Compile Include="ConexionSQL.cs" />
+    <Compile Include="DatosUsuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

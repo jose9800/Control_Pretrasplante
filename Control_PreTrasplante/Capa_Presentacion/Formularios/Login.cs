@@ -13,7 +13,7 @@ namespace Capa_Presentacion
 {
     public partial class Login : Form
     {
-        Logica_Secion secion;
+        //Logica_Secion secion;
         public Login()
         {
             InitializeComponent();
@@ -31,15 +31,56 @@ namespace Capa_Presentacion
         //    }
         //}
 
-        private void Login_Load(object sender, EventArgs e)
-        {
-            secion = new Logica_Secion();
-        }
+        //private void Login_Load(object sender, EventArgs e)
+        //{
+        //    secion = new Logica_Secion();
+        //}
 
-        private void button1_Click(object sender, EventArgs e)
+        //private void button1_Click(object sender, EventArgs e)
+        //{
+        //    Form mostrarform = new Inicio();
+        //    mostrarform.Show();
+        //}
+
+        private void btn_Entrar_Click(object sender, EventArgs e)
         {
-            Form mostrarform = new Inicio();
-            mostrarform.Show();
+            if (string.IsNullOrEmpty(txt_usuario.Text))
+            {
+                MessageBox.Show("Llenar el campo de usuario");
+                return;
+            }
+            else
+            {
+                if (string.IsNullOrEmpty(txt_contra.Text))
+                {
+                    MessageBox.Show("Llenar el campo de contraseña");
+                    return;
+                }
+                else
+                {
+                    UsuarioLogin loginUsuario = new UsuarioLogin();
+                    var validacion = loginUsuario.LoginUsuario(txt_usuario.Text, txt_contra.Text);
+                    if (validacion == true)
+                    {
+                        Inicio mostrarInicio = new Inicio();
+                        mostrarInicio.Show();
+                        mostrarInicio.FormClosed += CerrarSesion;
+                        this.Hide();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Usuario o contraseña incorrectos");
+                        txt_contra.Clear();
+                        txt_usuario.Clear();
+                    }
+                }
+            }
+        }
+        private void CerrarSesion(object sender, FormClosedEventArgs e)
+        {
+            txt_usuario.Clear();
+            txt_contra.Clear();
+            this.Show();
         }
     }
 }

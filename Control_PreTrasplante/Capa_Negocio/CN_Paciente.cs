@@ -32,5 +32,7 @@ namespace Capa_Negocio
         {
             objPaciente.EliminarDatos(Convert.ToInt16(id));
         }
+
+
     }
 }

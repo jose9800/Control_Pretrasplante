@@ -9,9 +9,13 @@ using System.Data.SqlClient;
 
 namespace Capa_AccesoDatos
 {
-    class ConexionSQL
+    public class ConexionSQL
     {
-        private SqlConnection conexion = new SqlConnection("Server=(local);Database=Pacientespretrasplante;integrated security =true");
+        protected SqlConnection GetSqlConnection()
+        {
+            return new SqlConnection(@"Data Source=DESKTOP-0OJ1B95\SQLEXPRESS;Initial Catalog=Pacientespretrasplante;Integrated Security=True");
+        }
+        private SqlConnection conexion = new SqlConnection(@"Data Source=DESKTOP-0OJ1B95\SQLEXPRESS;Initial Catalog=Pacientespretrasplante;Integrated Security=True");
 
         public SqlConnection AbrirConexion()
         {
