@@ -28,140 +28,169 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.fotopaciente = new System.Windows.Forms.PictureBox();
-            this.N_paciente = new System.Windows.Forms.Label();
-            this.N_seguro = new System.Windows.Forms.Label();
-            this.Edad_Paciente = new System.Windows.Forms.Label();
+            this.panelSuperior = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.Est = new System.Windows.Forms.Button();
+            this.Editar = new System.Windows.Forms.Button();
+            this.Eliminar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.E_realizados = new System.Windows.Forms.Label();
-            this.E_pendientes = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            ((System.ComponentModel.ISupportInitialize)(this.fotopaciente)).BeginInit();
+            this.panelSuperior.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // fotopaciente
+            // panelSuperior
             // 
-            this.fotopaciente.Location = new System.Drawing.Point(12, 12);
-            this.fotopaciente.Name = "fotopaciente";
-            this.fotopaciente.Size = new System.Drawing.Size(127, 140);
-            this.fotopaciente.TabIndex = 0;
-            this.fotopaciente.TabStop = false;
+            this.panelSuperior.Controls.Add(this.Eliminar);
+            this.panelSuperior.Controls.Add(this.Editar);
+            this.panelSuperior.Controls.Add(this.Est);
+            this.panelSuperior.Controls.Add(this.label1);
+            this.panelSuperior.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelSuperior.Location = new System.Drawing.Point(0, 0);
+            this.panelSuperior.Name = "panelSuperior";
+            this.panelSuperior.Size = new System.Drawing.Size(900, 44);
+            this.panelSuperior.TabIndex = 0;
             // 
-            // N_paciente
+            // label1
             // 
-            this.N_paciente.AutoSize = true;
-            this.N_paciente.Location = new System.Drawing.Point(164, 34);
-            this.N_paciente.Name = "N_paciente";
-            this.N_paciente.Size = new System.Drawing.Size(117, 17);
-            this.N_paciente.TabIndex = 1;
-            this.N_paciente.Text = "Nombre Paciente";
+            this.label1.AutoSize = true;
+            this.label1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(321, 32);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Moran Meraz Abraham";
             // 
-            // N_seguro
+            // Est
             // 
-            this.N_seguro.AutoSize = true;
-            this.N_seguro.Location = new System.Drawing.Point(164, 61);
-            this.N_seguro.Name = "N_seguro";
-            this.N_seguro.Size = new System.Drawing.Size(170, 17);
-            this.N_seguro.TabIndex = 2;
-            this.N_seguro.Text = "Numero de Seguro Social";
+            this.Est.BackColor = System.Drawing.Color.Lime;
+            this.Est.Dock = System.Windows.Forms.DockStyle.Left;
+            this.Est.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Est.ForeColor = System.Drawing.Color.Black;
+            this.Est.Location = new System.Drawing.Point(321, 0);
+            this.Est.Name = "Est";
+            this.Est.Size = new System.Drawing.Size(147, 44);
+            this.Est.TabIndex = 1;
+            this.Est.Text = "Estudios";
+            this.Est.UseVisualStyleBackColor = false;
             // 
-            // Edad_Paciente
+            // Editar
             // 
-            this.Edad_Paciente.AutoSize = true;
-            this.Edad_Paciente.Location = new System.Drawing.Point(164, 88);
-            this.Edad_Paciente.Name = "Edad_Paciente";
-            this.Edad_Paciente.Size = new System.Drawing.Size(41, 17);
-            this.Edad_Paciente.TabIndex = 3;
-            this.Edad_Paciente.Text = "Edad";
+            this.Editar.BackColor = System.Drawing.Color.Yellow;
+            this.Editar.Dock = System.Windows.Forms.DockStyle.Left;
+            this.Editar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Editar.Location = new System.Drawing.Point(468, 0);
+            this.Editar.Name = "Editar";
+            this.Editar.Size = new System.Drawing.Size(147, 44);
+            this.Editar.TabIndex = 2;
+            this.Editar.Text = "Editar";
+            this.Editar.UseVisualStyleBackColor = false;
+            // 
+            // Eliminar
+            // 
+            this.Eliminar.BackColor = System.Drawing.Color.Red;
+            this.Eliminar.Dock = System.Windows.Forms.DockStyle.Left;
+            this.Eliminar.ForeColor = System.Drawing.Color.Black;
+            this.Eliminar.Location = new System.Drawing.Point(615, 0);
+            this.Eliminar.Name = "Eliminar";
+            this.Eliminar.Size = new System.Drawing.Size(147, 44);
+            this.Eliminar.TabIndex = 3;
+            this.Eliminar.Text = "Eliminar";
+            this.Eliminar.UseVisualStyleBackColor = false;
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Black;
-            this.panel1.Location = new System.Drawing.Point(15, 199);
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.button3);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 44);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(876, 1);
-            this.panel1.TabIndex = 4;
+            this.panel1.Size = new System.Drawing.Size(900, 44);
+            this.panel1.TabIndex = 1;
             // 
-            // E_realizados
+            // button1
             // 
-            this.E_realizados.AutoSize = true;
-            this.E_realizados.Location = new System.Drawing.Point(12, 179);
-            this.E_realizados.Name = "E_realizados";
-            this.E_realizados.Size = new System.Drawing.Size(136, 17);
-            this.E_realizados.TabIndex = 5;
-            this.E_realizados.Text = "Estudios Realizados";
+            this.button1.BackColor = System.Drawing.Color.Red;
+            this.button1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.Location = new System.Drawing.Point(676, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(147, 44);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = false;
             // 
-            // E_pendientes
+            // button2
             // 
-            this.E_pendientes.AutoSize = true;
-            this.E_pendientes.Location = new System.Drawing.Point(12, 269);
-            this.E_pendientes.Name = "E_pendientes";
-            this.E_pendientes.Size = new System.Drawing.Size(137, 17);
-            this.E_pendientes.TabIndex = 7;
-            this.E_pendientes.Text = "Estudios Pendientes";
+            this.button2.BackColor = System.Drawing.Color.Yellow;
+            this.button2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Location = new System.Drawing.Point(529, 0);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(147, 44);
+            this.button2.TabIndex = 2;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = false;
             // 
-            // panel2
+            // button3
             // 
-            this.panel2.BackColor = System.Drawing.Color.Black;
-            this.panel2.Location = new System.Drawing.Point(15, 300);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(876, 1);
-            this.panel2.TabIndex = 6;
+            this.button3.BackColor = System.Drawing.Color.Lime;
+            this.button3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.ForeColor = System.Drawing.Color.Black;
+            this.button3.Location = new System.Drawing.Point(382, 0);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(147, 44);
+            this.button3.TabIndex = 1;
+            this.button3.Text = "Estudios";
+            this.button3.UseVisualStyleBackColor = false;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 374);
+            this.label2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(0, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(100, 17);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "Nuevo Estudio";
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.Black;
-            this.panel3.Location = new System.Drawing.Point(15, 409);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(876, 1);
-            this.panel3.TabIndex = 8;
+            this.label2.Size = new System.Drawing.Size(382, 32);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Flores Jonzales Luis Diego";
             // 
             // Lista_Pacientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(900, 512);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.E_pendientes);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.E_realizados);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.Edad_Paciente);
-            this.Controls.Add(this.N_seguro);
-            this.Controls.Add(this.N_paciente);
-            this.Controls.Add(this.fotopaciente);
+            this.Controls.Add(this.panelSuperior);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Lista_Pacientes";
             this.Text = "Lista_Pacientes";
-            ((System.ComponentModel.ISupportInitialize)(this.fotopaciente)).EndInit();
+            this.panelSuperior.ResumeLayout(false);
+            this.panelSuperior.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.PictureBox fotopaciente;
-        private System.Windows.Forms.Label N_paciente;
-        private System.Windows.Forms.Label N_seguro;
-        private System.Windows.Forms.Label Edad_Paciente;
+        private System.Windows.Forms.Panel panelSuperior;
+        private System.Windows.Forms.Button Eliminar;
+        private System.Windows.Forms.Button Editar;
+        private System.Windows.Forms.Button Est;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label E_realizados;
-        private System.Windows.Forms.Label E_pendientes;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Panel panel3;
     }
 }
