@@ -13,9 +13,9 @@ namespace Capa_AccesoDatos
     {
         protected SqlConnection GetSqlConnection()
         {
-            return new SqlConnection(@"Data Source=DESKTOP-0OJ1B95\SQLEXPRESS;Initial Catalog=Pacientespretrasplante;Integrated Security=True");
+            return new SqlConnection("Server=(local);Database=Pacientespretrasplante;integrated security =true");
         }
-        private SqlConnection conexion = new SqlConnection(@"Data Source=DESKTOP-0OJ1B95\SQLEXPRESS;Initial Catalog=Pacientespretrasplante;Integrated Security=True");
+        private SqlConnection conexion = new SqlConnection("Server=(local);Database=Pacientespretrasplante;integrated security =true");
 
         public SqlConnection AbrirConexion()
         {

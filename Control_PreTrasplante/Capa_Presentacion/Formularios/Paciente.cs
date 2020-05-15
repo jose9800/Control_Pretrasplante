@@ -26,7 +26,7 @@ namespace Capa_Presentacion
             
             //initialize word object  
             Document document = new Document();
-            document.LoadFromFile(@"C:\Users\Core i3\Documents\Formulario de atención PreHospitalaria.docx");
+            document.LoadFromFile(@"E:\Programas TEC\TEC\Formulario-de-atención-PreHospitalaria.docx");
             //get strings to replace  
             Dictionary<string, string> dictReplace = GetReplaceDictionary();
             //Replace text  
@@ -114,6 +114,7 @@ namespace Capa_Presentacion
 
         private void btn_editar_Click(object sender, EventArgs e)
         {
+            tbc_datosGenerales.SelectedTab = tabPage1;
             tbc_datosGenerales.Show();
             if (dataGridView1.SelectedRows.Count > 0)
             {
