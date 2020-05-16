@@ -16,5 +16,15 @@ namespace Capa_Presentacion
         {
             InitializeComponent();
         }
+
+        public Estudios()
+        {
+            InitializeComponent();
+        }
+
+        private void Estudios_Load(object sender, EventArgs e)
+        {
+            
+        } 
     }
 }

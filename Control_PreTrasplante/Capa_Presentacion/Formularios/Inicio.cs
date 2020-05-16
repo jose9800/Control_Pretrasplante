@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -63,7 +64,7 @@ namespace Capa_Presentacion
         }
 
         //Abrir formulario
-        private void AbrirFormularios(Form hijo)
+        public void AbrirFormularios(Form hijo)
         {
             if (formularioHijo != null)
             {
@@ -140,21 +141,21 @@ namespace Capa_Presentacion
 
         private void lista_paciente_Click(object sender, EventArgs e)
         {
-            AbrirFormularios(new Lista_Pacientes());
+            AbrirFormularios(new Lista_P(panel_central));
             //OcultarSubmenu();
         }
 
         //---------------------------------------Botones para cerrar sesión, minimizar y cerrar aplicación-------------------------------------
         private void btn_CerrarSesion_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Cerrar sesión, ¿estas seguro?", "Warning",
+            if (MessageBox.Show("Cerrar sesión, ¿estas seguro?", "Advertencia",
                MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 this.Close();
         }
 
         private void btn_CerrarTodo_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Cerrar aplicación, ¿estas seguro?", "Warning",
+            if (MessageBox.Show("Cerrar aplicación, ¿estas seguro?", "Advertencia",
                 MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 Application.Exit();
         }
@@ -162,6 +163,11 @@ namespace Capa_Presentacion
         private void btn_minimizar_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void Inicio_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

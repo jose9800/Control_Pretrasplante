@@ -76,11 +76,11 @@
     <Compile Include="Formularios\Inicio.Designer.cs">
       <DependentUpon>Inicio.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Lista_Pacientes.cs">
+    <Compile Include="Formularios\Lista_P.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Lista_Pacientes.Designer.cs">
-      <DependentUpon>Lista_Pacientes.cs</DependentUpon>
+    <Compile Include="Formularios\Lista_P.Designer.cs">
+      <DependentUpon>Lista_P.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Login.cs">
       <SubType>Form</SubType>
@@ -117,8 +117,8 @@
     <EmbeddedResource Include="Formularios\Inicio.resx">
       <DependentUpon>Inicio.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Lista_Pacientes.resx">
-      <DependentUpon>Lista_Pacientes.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\Lista_P.resx">
+      <DependentUpon>Lista_P.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

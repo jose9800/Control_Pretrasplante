@@ -51,9 +51,10 @@
             this.panel_IniciarSesion.Controls.Add(this.txt_contra);
             this.panel_IniciarSesion.Controls.Add(this.txt_usuario);
             this.panel_IniciarSesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel_IniciarSesion.Location = new System.Drawing.Point(206, 189);
+            this.panel_IniciarSesion.Location = new System.Drawing.Point(275, 233);
+            this.panel_IniciarSesion.Margin = new System.Windows.Forms.Padding(4);
             this.panel_IniciarSesion.Name = "panel_IniciarSesion";
-            this.panel_IniciarSesion.Size = new System.Drawing.Size(517, 248);
+            this.panel_IniciarSesion.Size = new System.Drawing.Size(689, 305);
             this.panel_IniciarSesion.TabIndex = 1;
             // 
             // btn_Entrar
@@ -62,9 +63,10 @@
             this.btn_Entrar.FlatAppearance.BorderSize = 0;
             this.btn_Entrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Entrar.ForeColor = System.Drawing.Color.White;
-            this.btn_Entrar.Location = new System.Drawing.Point(206, 200);
+            this.btn_Entrar.Location = new System.Drawing.Point(275, 246);
+            this.btn_Entrar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Entrar.Name = "btn_Entrar";
-            this.btn_Entrar.Size = new System.Drawing.Size(118, 34);
+            this.btn_Entrar.Size = new System.Drawing.Size(157, 42);
             this.btn_Entrar.TabIndex = 5;
             this.btn_Entrar.Text = "Entrar";
             this.btn_Entrar.UseVisualStyleBackColor = false;
@@ -74,54 +76,64 @@
             // 
             this.lbl_InicioSesion.AutoSize = true;
             this.lbl_InicioSesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_InicioSesion.Location = new System.Drawing.Point(187, 9);
+            this.lbl_InicioSesion.Location = new System.Drawing.Point(249, 11);
+            this.lbl_InicioSesion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_InicioSesion.Name = "lbl_InicioSesion";
-            this.lbl_InicioSesion.Size = new System.Drawing.Size(154, 29);
+            this.lbl_InicioSesion.Size = new System.Drawing.Size(190, 36);
             this.lbl_InicioSesion.TabIndex = 2;
             this.lbl_InicioSesion.Text = "Iniciar sesión";
             // 
             // lbl_usuario
             // 
             this.lbl_usuario.AutoSize = true;
-            this.lbl_usuario.Location = new System.Drawing.Point(142, 70);
+            this.lbl_usuario.Location = new System.Drawing.Point(189, 86);
+            this.lbl_usuario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_usuario.Name = "lbl_usuario";
-            this.lbl_usuario.Size = new System.Drawing.Size(173, 24);
+            this.lbl_usuario.Size = new System.Drawing.Size(220, 29);
             this.lbl_usuario.TabIndex = 3;
             this.lbl_usuario.Text = "Nombre de usuario";
             // 
             // lbl_contrasena
             // 
             this.lbl_contrasena.AutoSize = true;
-            this.lbl_contrasena.Location = new System.Drawing.Point(142, 129);
+            this.lbl_contrasena.Location = new System.Drawing.Point(189, 159);
+            this.lbl_contrasena.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_contrasena.Name = "lbl_contrasena";
-            this.lbl_contrasena.Size = new System.Drawing.Size(106, 24);
+            this.lbl_contrasena.Size = new System.Drawing.Size(136, 29);
             this.lbl_contrasena.TabIndex = 4;
             this.lbl_contrasena.Text = "Contraseña";
             // 
             // txt_contra
             // 
             this.txt_contra.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txt_contra.Location = new System.Drawing.Point(146, 156);
+            this.txt_contra.Location = new System.Drawing.Point(195, 192);
+            this.txt_contra.Margin = new System.Windows.Forms.Padding(4);
             this.txt_contra.MaxLength = 20;
             this.txt_contra.Name = "txt_contra";
             this.txt_contra.PasswordChar = '*';
-            this.txt_contra.Size = new System.Drawing.Size(238, 29);
+            this.txt_contra.Size = new System.Drawing.Size(316, 34);
             this.txt_contra.TabIndex = 1;
+            this.txt_contra.Text = "SUSANA24";
+            this.txt_contra.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_contra_KeyDown);
             // 
             // txt_usuario
             // 
-            this.txt_usuario.Location = new System.Drawing.Point(146, 97);
+            this.txt_usuario.Location = new System.Drawing.Point(195, 119);
+            this.txt_usuario.Margin = new System.Windows.Forms.Padding(4);
             this.txt_usuario.Name = "txt_usuario";
-            this.txt_usuario.Size = new System.Drawing.Size(238, 29);
+            this.txt_usuario.Size = new System.Drawing.Size(316, 34);
             this.txt_usuario.TabIndex = 0;
+            this.txt_usuario.Text = "Abr06";
+            this.txt_usuario.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_usuario_KeyDown);
             // 
             // ptb_logo
             // 
             this.ptb_logo.Dock = System.Windows.Forms.DockStyle.Top;
             this.ptb_logo.Image = global::Capa_Presentacion.Properties.Resources.encabezado;
             this.ptb_logo.Location = new System.Drawing.Point(0, 0);
+            this.ptb_logo.Margin = new System.Windows.Forms.Padding(4);
             this.ptb_logo.Name = "ptb_logo";
-            this.ptb_logo.Size = new System.Drawing.Size(884, 119);
+            this.ptb_logo.Size = new System.Drawing.Size(1179, 146);
             this.ptb_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ptb_logo.TabIndex = 0;
             this.ptb_logo.TabStop = false;
@@ -130,27 +142,30 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(162)))), ((int)(((byte)(110)))));
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 544);
+            this.panel1.Location = new System.Drawing.Point(0, 669);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(884, 17);
+            this.panel1.Size = new System.Drawing.Size(1179, 21);
             this.panel1.TabIndex = 7;
             // 
             // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
-            this.ClientSize = new System.Drawing.Size(884, 561);
+            this.ClientSize = new System.Drawing.Size(1179, 690);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel_IniciarSesion);
             this.Controls.Add(this.ptb_logo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Iniciar sesión";
+            this.Load += new System.EventHandler(this.Login_Load);
             this.panel_IniciarSesion.ResumeLayout(false);
             this.panel_IniciarSesion.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptb_logo)).EndInit();
