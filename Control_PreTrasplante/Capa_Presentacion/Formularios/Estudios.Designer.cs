@@ -37,7 +37,7 @@
             this.NSS = new System.Windows.Forms.Label();
             this.AM = new System.Windows.Forms.Label();
             this.AP = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.nombre = new System.Windows.Forms.Label();
             this.txt_1 = new System.Windows.Forms.Label();
             this.txt_2 = new System.Windows.Forms.Label();
             this.txt_3 = new System.Windows.Forms.Label();
@@ -49,6 +49,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.Informacion.SuspendLayout();
@@ -68,31 +69,31 @@
             // txt_4
             // 
             this.txt_4.AutoSize = true;
-            this.txt_4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_4.Location = new System.Drawing.Point(8, 127);
+            this.txt_4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_4.Location = new System.Drawing.Point(8, 117);
             this.txt_4.Name = "txt_4";
-            this.txt_4.Size = new System.Drawing.Size(60, 25);
+            this.txt_4.Size = new System.Drawing.Size(48, 20);
             this.txt_4.TabIndex = 4;
             this.txt_4.Text = "NSS:";
             // 
             // txt_5
             // 
             this.txt_5.AutoSize = true;
-            this.txt_5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_5.Location = new System.Drawing.Point(8, 159);
+            this.txt_5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_5.Location = new System.Drawing.Point(8, 149);
             this.txt_5.Name = "txt_5";
-            this.txt_5.Size = new System.Drawing.Size(73, 25);
+            this.txt_5.Size = new System.Drawing.Size(61, 20);
             this.txt_5.TabIndex = 5;
             this.txt_5.Text = "CURP:";
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(544, 43);
+            this.dataGridView1.Location = new System.Drawing.Point(577, 43);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(954, 167);
+            this.dataGridView1.Size = new System.Drawing.Size(921, 167);
             this.dataGridView1.TabIndex = 6;
             // 
             // Informacion
@@ -102,7 +103,7 @@
             this.Informacion.Controls.Add(this.NSS);
             this.Informacion.Controls.Add(this.AM);
             this.Informacion.Controls.Add(this.AP);
-            this.Informacion.Controls.Add(this.label1);
+            this.Informacion.Controls.Add(this.nombre);
             this.Informacion.Controls.Add(this.txt_1);
             this.Informacion.Controls.Add(this.txt_2);
             this.Informacion.Controls.Add(this.txt_5);
@@ -110,17 +111,17 @@
             this.Informacion.Controls.Add(this.txt_4);
             this.Informacion.Location = new System.Drawing.Point(218, 12);
             this.Informacion.Name = "Informacion";
-            this.Informacion.Size = new System.Drawing.Size(315, 200);
+            this.Informacion.Size = new System.Drawing.Size(348, 200);
             this.Informacion.TabIndex = 7;
             // 
             // curp
             // 
             this.curp.AutoEllipsis = true;
             this.curp.AutoSize = true;
-            this.curp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.curp.Location = new System.Drawing.Point(200, 159);
+            this.curp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.curp.Location = new System.Drawing.Point(83, 149);
             this.curp.Name = "curp";
-            this.curp.Size = new System.Drawing.Size(64, 25);
+            this.curp.Size = new System.Drawing.Size(46, 18);
             this.curp.TabIndex = 10;
             this.curp.Text = "label5";
             // 
@@ -128,10 +129,10 @@
             // 
             this.NSS.AutoEllipsis = true;
             this.NSS.AutoSize = true;
-            this.NSS.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NSS.Location = new System.Drawing.Point(200, 127);
+            this.NSS.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NSS.Location = new System.Drawing.Point(163, 117);
             this.NSS.Name = "NSS";
-            this.NSS.Size = new System.Drawing.Size(64, 25);
+            this.NSS.Size = new System.Drawing.Size(53, 20);
             this.NSS.TabIndex = 9;
             this.NSS.Text = "label4";
             // 
@@ -139,10 +140,10 @@
             // 
             this.AM.AutoEllipsis = true;
             this.AM.AutoSize = true;
-            this.AM.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AM.Location = new System.Drawing.Point(200, 95);
+            this.AM.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AM.Location = new System.Drawing.Point(163, 85);
             this.AM.Name = "AM";
-            this.AM.Size = new System.Drawing.Size(64, 25);
+            this.AM.Size = new System.Drawing.Size(53, 20);
             this.AM.TabIndex = 8;
             this.AM.Text = "label3";
             // 
@@ -150,51 +151,51 @@
             // 
             this.AP.AutoEllipsis = true;
             this.AP.AutoSize = true;
-            this.AP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AP.Location = new System.Drawing.Point(200, 63);
+            this.AP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AP.Location = new System.Drawing.Point(163, 53);
             this.AP.Name = "AP";
-            this.AP.Size = new System.Drawing.Size(64, 25);
+            this.AP.Size = new System.Drawing.Size(53, 20);
             this.AP.TabIndex = 7;
             this.AP.Text = "label2";
             // 
-            // label1
+            // nombre
             // 
-            this.label1.AutoEllipsis = true;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(200, 31);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 25);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "label1";
+            this.nombre.AutoEllipsis = true;
+            this.nombre.AutoSize = true;
+            this.nombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nombre.Location = new System.Drawing.Point(163, 21);
+            this.nombre.Name = "nombre";
+            this.nombre.Size = new System.Drawing.Size(53, 20);
+            this.nombre.TabIndex = 6;
+            this.nombre.Text = "label1";
             // 
             // txt_1
             // 
             this.txt_1.AutoSize = true;
-            this.txt_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_1.Location = new System.Drawing.Point(8, 31);
+            this.txt_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_1.Location = new System.Drawing.Point(8, 21);
             this.txt_1.Name = "txt_1";
-            this.txt_1.Size = new System.Drawing.Size(87, 25);
+            this.txt_1.Size = new System.Drawing.Size(73, 20);
             this.txt_1.TabIndex = 1;
             this.txt_1.Text = "Nombre:";
             // 
             // txt_2
             // 
             this.txt_2.AutoSize = true;
-            this.txt_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_2.Location = new System.Drawing.Point(8, 63);
+            this.txt_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_2.Location = new System.Drawing.Point(8, 53);
             this.txt_2.Name = "txt_2";
-            this.txt_2.Size = new System.Drawing.Size(161, 25);
+            this.txt_2.Size = new System.Drawing.Size(136, 20);
             this.txt_2.TabIndex = 2;
             this.txt_2.Text = "Apellido Paterno:";
             // 
             // txt_3
             // 
             this.txt_3.AutoSize = true;
-            this.txt_3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_3.Location = new System.Drawing.Point(8, 95);
+            this.txt_3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_3.Location = new System.Drawing.Point(8, 85);
             this.txt_3.Name = "txt_3";
-            this.txt_3.Size = new System.Drawing.Size(165, 25);
+            this.txt_3.Size = new System.Drawing.Size(139, 20);
             this.txt_3.TabIndex = 3;
             this.txt_3.Text = "Apellido Materno:";
             // 
@@ -202,7 +203,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic);
-            this.label6.Location = new System.Drawing.Point(539, 9);
+            this.label6.Location = new System.Drawing.Point(572, 9);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(188, 25);
             this.label6.TabIndex = 8;
@@ -212,7 +213,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic);
-            this.label7.Location = new System.Drawing.Point(544, 223);
+            this.label7.Location = new System.Drawing.Point(572, 223);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(190, 25);
             this.label7.TabIndex = 10;
@@ -221,18 +222,18 @@
             // dataGridView2
             // 
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(544, 251);
+            this.dataGridView2.Location = new System.Drawing.Point(577, 251);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersWidth = 51;
             this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(959, 167);
+            this.dataGridView2.Size = new System.Drawing.Size(926, 167);
             this.dataGridView2.TabIndex = 9;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic);
-            this.label8.Location = new System.Drawing.Point(539, 432);
+            this.label8.Location = new System.Drawing.Point(572, 432);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(139, 25);
             this.label8.TabIndex = 12;
@@ -241,11 +242,11 @@
             // dataGridView3
             // 
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(544, 470);
+            this.dataGridView3.Location = new System.Drawing.Point(577, 470);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.RowHeadersWidth = 51;
             this.dataGridView3.RowTemplate.Height = 24;
-            this.dataGridView3.Size = new System.Drawing.Size(959, 167);
+            this.dataGridView3.Size = new System.Drawing.Size(926, 167);
             this.dataGridView3.TabIndex = 11;
             // 
             // label9
@@ -279,6 +280,18 @@
             this.listBox1.Size = new System.Drawing.Size(119, 20);
             this.listBox1.TabIndex = 15;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Red;
+            this.label1.Location = new System.Drawing.Point(1482, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(25, 24);
+            this.label1.TabIndex = 16;
+            this.label1.Text = "X";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
             // Estudios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -286,6 +299,7 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1519, 658);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label9);
@@ -335,6 +349,7 @@
         public System.Windows.Forms.Label NSS;
         public System.Windows.Forms.Label AM;
         public System.Windows.Forms.Label AP;
-        public System.Windows.Forms.Label label1;
+        public System.Windows.Forms.Label nombre;
+        private System.Windows.Forms.Label label1;
     }
 }

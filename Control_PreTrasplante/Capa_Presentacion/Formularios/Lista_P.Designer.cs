@@ -79,6 +79,7 @@
             this.Lista.Size = new System.Drawing.Size(1639, 937);
             this.Lista.TabIndex = 0;
             this.Lista.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Lista_CellContentDoubleClick);
+            this.Lista.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.Lista_CellMouseDoubleClick);
             // 
             // Lista_P
             // 
